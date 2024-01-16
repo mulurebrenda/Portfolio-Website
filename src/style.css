@@ -47,17 +47,64 @@ div.vertical-line {
   height: 25px;
   background: rgb(179, 175, 175);
 }
-div.skills {
+div.skills, div.about-section {
   flex-wrap: wrap;
+}
+div.about-section {
+    margin-top: 50px;
 }
 .html,
 .css,
 .js,
-.bootstrap {
+.bootstrap, .image-about-section, .about {
   flex: 1;
 }
+div.about{
+     display: flex;
+     flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+h2.about-heading, h3.about-me-heading{
+    font-family: var(--heading-font);
+}
+h2.about-heading{
+    color: rgb(16, 128, 176);
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 30px;
+}
+h3.about-me-heading{
+    font-size: 0.9em;
+    font-weight: 700;
+}
+div.image-about-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img.desk-setup{
+    border-radius: 8px;  
+    height: 200px;
+}
+
 @media (min-width: 768px) {
   div.body {
-    width: 75%;
+    width: 85%;
   }
+}
+@media (max-width: 550px) {
+    div.about-section {
+    margin-top: 40px;
+    display: block; 
+}
+h2.about-heading, h3.about-me-heading, p.about-me{
+    text-align: center;
+}
+img.desk-setup{
+    display: none;
+}
+div.about{
+    margin-top: 0;
+}
 }
