@@ -33,25 +33,23 @@
       <header class="nav-bar d-flex justify-content-between w-100">
         <div class="brand">Brenda Mulure</div>
         <div class="section-links">
-          <a href="/" class="home text-decoration-none text-black">Home</a>
-          <a href="#aboutSection" class="about text-decoration-none text-black"
-            >About</a
-          >
-          <a href="" class="projects text-decoration-none text-black"
+          <a href="/" class="home text-decoration-none">Home</a>
+          <a href="#aboutSection" class="about text-decoration-none">About</a>
+          <a href="#portfolio" class="projects text-decoration-none"
             >Projects</a
           >
-          <a href="" class="contact text-decoration-none text-black">Contact</a>
+          <a href="#contacts" class="contact text-decoration-none">Contact</a>
         </div>
       </header>
       <div class="body m-auto">
         <div class="intro-section d-flex">
           <div class="intro m-auto pe-1 ps-2">
             <h1 class="title">Front-End Developer 👋🏽</h1>
-            <p>
+            <p class="mb-1">
               Hi, I'm Brenda Mulure. A passionate Front-End Developer based in
               Nairobi, Kenya 📍
             </p>
-            <div class="links">
+            <div class="links pt-2">
               <a
                 href="https://www.linkedin.com/in/brenda-mulure"
                 class="linked-in text-decoration-none p-2 ps-0"
@@ -76,9 +74,11 @@
             />
           </div>
         </div>
-        <div class="row tech-stack d-flex justify-content-between m-auto ps-2">
+        <div
+          class="row my-skills d-flex justify-content-between m-auto ps-2 pb-2"
+        >
           <div class="col-3 d-flex">
-            <p>Tech Stack</p>
+            <p class="pt-1">My Skills</p>
             <div class="vertical-line ms-2"></div>
           </div>
           <div class="col-9 skills d-flex justify-content-evenly ps-3">
@@ -91,6 +91,7 @@
             ></i>
           </div>
         </div>
+        <hr class="w-50 section-divider" />
         <div class="row about-section ps-3 pe-3" id="aboutSection">
           <div class="col-sm-5 image-about-section p-2">
             <img
@@ -113,6 +114,118 @@
               appealing and dynamic websites through writing clean and optimized
               code with cutting-edge development tools.
             </p>
+          </div>
+        </div>
+        <hr class="w-50 section-divider" />
+        <div class="projects-section pt-5 pb-5" id="portfolio">
+          <div class="portfolio-intro">
+            <h2 class="portfolio-heading">PROJECTS</h2>
+            <h3 class="projects-heading">
+              Welcome to my portfolio
+              <i class="fa-solid fa-code" style="color: #000000"></i>
+            </h3>
+          </div>
+          <div class="projects ps-3 pe-3">
+            <div class="project-1">
+              <div class="row">
+                <div class="col-sm-5 project-preview"></div>
+                <div class="col-sm-7 about-project"></div>
+              </div>
+            </div>
+            <div class="project-2">
+              <div class="row">
+                <div class="col-sm-7 about-project"></div>
+                <div class="col-sm-5 project-preview"></div>
+              </div>
+            </div>
+            <div class="project-3">
+              <div class="row">
+                <div class="col-sm-5 project-preview"></div>
+                <div class="col-sm-7 about-project"></div>
+              </div>
+            </div>
+            <div class="project-4">
+              <div class="row">
+                <div class="col-sm-7 about-project"></div>
+                <div class="col-sm-5 project-preview"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="w-50 section-divider" />
+        <div class="contact-section pt-5 pb-3" id="contacts">
+          <div class="contact-intro">
+            <h2 class="contact-heading">CONTACT</h2>
+            <h3 class="contacts-heading">Get In Touch😊</h3>
+          </div>
+          <div class="contacts">
+            <div class="email-phone">
+              <div class="email">
+                <span class="email-heading"
+                  ><i class="fa-regular fa-envelope" style="color: #1080b0"></i>
+                  Email</span
+                >
+                <br />
+                <a
+                  href="mailto:mulurebrenda02@gmail.com"
+                  class="email-link text-decoration-none"
+                  >mulurebrenda02@gmail.com</a
+                >
+              </div>
+              <div class="phone">
+                <span class="phone-heading"
+                  ><i class="fa-solid fa-phone" style="color: #1080b0"></i>
+                  Phone</span
+                >
+                <br />
+                +254758483182
+              </div>
+            </div>
+            <div class="social-location">
+              <div class="social">
+                <span class="social-heading"
+                  ><i
+                    class="fa-solid fa-share-nodes"
+                    style="color: #1080b0"
+                  ></i>
+                  Social</span
+                >
+                <div class="social-links mt-2 ms-2">
+                  <a
+                    href="https://www.linkedin.com/in/brenda-mulure"
+                    class="linked-in text-decoration-none p-2"
+                    target="_blank"
+                  >
+                    <i class="fa-brands fa-linkedin" style="color: #212529"></i
+                  ></a>
+                  <a
+                    href="https://github.com/mulurebrenda"
+                    class="github text-decoration-none p-2"
+                    target="_blank"
+                  >
+                    <i class="fa-brands fa-github" style="color: #212529"></i
+                  ></a>
+                  <a
+                    href="https://www.tiktok.com/@brendamulure?_t=8j6WwEu8RyH&_r=1"
+                    class="tiktok text-decoration-none p-2"
+                    target="_blank"
+                  >
+                    <i class="fa-brands fa-tiktok" style="color: #212529"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="location">
+                <span class="location-heading"
+                  ><i
+                    class="fa-solid fa-location-dot"
+                    style="color: #1080b0"
+                  ></i>
+                  Location</span
+                >
+                <br />
+                Nairobi, Kenya
+              </div>
+            </div>
           </div>
         </div>
       </div>

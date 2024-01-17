@@ -8,6 +8,7 @@
 :root {
   --heading-font: "Libre Baskerville", serif;
   --paragraph-font-size: 0.9em;
+  --section-heading-color: #1080b0;
 }
 p {
   font-size: var(--paragraph-font-size);
@@ -31,6 +32,13 @@ header {
   padding: 3px;
   font-size: 0.7em;
   font-weight: 900;
+  color: #000000;
+  transition: all ease-in-out 200ms;
+}
+.section-links a:hover {
+  color: var(--section-heading-color);
+  font-size: 0.65em;
+  padding: 4px;
 }
 h1.title {
   font-family: var(--heading-font);
@@ -47,64 +55,151 @@ div.vertical-line {
   height: 25px;
   background: rgb(179, 175, 175);
 }
-div.skills, div.about-section {
+div.my-skills p {
+  font-family: var(--heading-font);
+  font-size: 0.72em;
+  font-weight: 560;
+}
+div.skills,
+div.about-section {
   flex-wrap: wrap;
 }
 div.about-section {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 .html,
 .css,
 .js,
-.bootstrap, .image-about-section, .about {
+.bootstrap,
+.image-about-section,
+.about {
   flex: 1;
 }
-div.about{
-     display: flex;
-     flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
+div.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-h2.about-heading, h3.about-me-heading{
-    font-family: var(--heading-font);
+h2.about-heading,
+h2.portfolio-heading,
+h2.contact-heading,
+h3.contacts-heading,
+h3.projects-heading,
+h3.about-me-heading {
+  font-family: var(--heading-font);
 }
-h2.about-heading{
-    color: rgb(16, 128, 176);
-    font-size: 1em;
-    font-weight: 700;
-    line-height: 30px;
+h2.about-heading,
+h2.portfolio-heading,
+h2.contact-heading {
+  color: var(--section-heading-color);
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 30px;
 }
-h3.about-me-heading{
-    font-size: 0.9em;
-    font-weight: 700;
+h3.about-me-heading,
+h3.projects-heading,
+h3.contacts-heading {
+  font-size: 0.9em;
+  font-weight: 700;
 }
-div.image-about-section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+h2.portfolio-heading,
+h3.projects-heading,
+h2.contact-heading,
+h3.contacts-heading {
+  text-align: center;
 }
-img.desk-setup{
-    border-radius: 8px;  
-    height: 200px;
+div.image-about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+img.desk-setup {
+  border-radius: 8px;
+  height: 200px;
+}
+hr.section-divider {
+  display: none;
+}
+div.project-1,
+div.project-2,
+div.project-3,
+div.project-4 {
+  box-shadow: 1px 1px 8px rgb(181, 179, 179);
+  border-radius: 10px;
+}
+span.email-heading,
+span.phone-heading,
+span.social-heading,
+span.location-heading {
+  color: var(--section-heading-color);
+  font-family: var(--heading-font);
+}
+div.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+div.email-phone,
+div.social-location {
+  flex: 1;
+}
+div.email,
+div.phone,
+div.social,
+div.location {
+  padding: 30px;
+  text-align: center;
+}
+.email a{
+  color: #000000;
+}
+.email a:hover{
+  color: var(--section-heading-color);
+}
+.email a,
+.links a,
+.social-links a {
+  transition: all ease-in-out 200ms;
+}
+.links a,
+.social-links a{
+  font-size: 1.2em;
+}
+.links a:hover,
+.social-links a:hover {
+  font-size: 1.1em;
+  margin: 2px 1px;
+}
 @media (min-width: 768px) {
   div.body {
     width: 85%;
   }
 }
 @media (max-width: 550px) {
-    div.about-section {
-    margin-top: 40px;
-    display: block; 
-}
-h2.about-heading, h3.about-me-heading, p.about-me{
-    text-align: center;
-}
-img.desk-setup{
-    display: none;
-}
-div.about{
+  div.about-section {
     margin-top: 0;
-}
+    display: block;
+  }
+  h2.about-heading,
+  h3.about-me-heading,
+  p.about-me {
+    text-align: center;
+  }
+  img.desk-setup {
+    display: none;
+  }
+  div.about {
+    margin-top: 0;
+  }
+  hr.section-divider {
+    display: block;
+    margin: 20px auto;
+  }
+  div.contacts {
+    display: block;
+    text-align: center;
+  }
 }
