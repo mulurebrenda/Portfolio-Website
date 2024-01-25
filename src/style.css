@@ -86,7 +86,8 @@ h2.portfolio-heading,
 h2.contact-heading,
 h3.contacts-heading,
 h3.projects-heading,
-h3.about-me-heading {
+h3.about-me-heading,
+h3.project-title {
   font-family: var(--heading-font);
 }
 h2.about-heading,
@@ -153,10 +154,10 @@ div.location {
   padding: 30px;
   text-align: center;
 }
-.email a{
+.email a {
   color: #000000;
 }
-.email a:hover{
+.email a:hover {
   color: var(--section-heading-color);
 }
 .email a,
@@ -165,13 +166,46 @@ div.location {
   transition: all ease-in-out 200ms;
 }
 .links a,
-.social-links a{
+.social-links a {
   font-size: 1.2em;
 }
 .links a:hover,
 .social-links a:hover {
   font-size: 1.1em;
   margin: 2px 1px;
+}
+div.about-project {
+margin: auto;
+}
+div.project-code-links {
+  display: flex;
+  gap: 1em;
+}
+div.tech-stack i{ 
+  margin: 0 30px 10px 0;
+}
+p.details {
+  font-size: 0.8em;
+  padding-top: 8px;
+}
+a.btn {
+  border-radius: 4px;
+  border: 1px solid #46849faa;
+  color: #46849faa;
+  background-color: #fff;
+  padding: 5px 7px;
+  margin-top: 5px;
+  font-size: 0.7em;
+}
+a.btn:hover { 
+  background: #46849faa;
+  color: #fff;
+}
+h3.project-title{
+  display: flex;
+  justify-content: start;
+  color: var(--section-heading-color);
+  font-size: 0.9em;
 }
 @media (min-width: 768px) {
   div.body {
