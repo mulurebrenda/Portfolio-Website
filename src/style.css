@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
 }
+body {
+  min-height: 100vh;
+  min-width: 320px;
+}
 .container {
   font-family: "Nunito", sans-serif;
 }
@@ -23,22 +27,38 @@ div.intro-section {
   flex: 1;
 }
 header {
+  justify-content: space-between;
   margin: 5px 3px;
   padding: 5px;
   width: 100%;
   font-family: var(--heading-font);
 }
-.section-links a {
+div.section-links a {
   padding: 3px;
   font-size: 0.7em;
   font-weight: 900;
   color: #000000;
+  position: relative;
   transition: all ease-in-out 200ms;
 }
-.section-links a:hover {
+div.section-links a:hover {
   color: var(--section-heading-color);
-  font-size: 0.65em;
-  padding: 4px;
+}
+div.section-links a::after, a.btn::after {
+  content: "";
+  position: absolute;
+  transform: scaleX(0);
+  width: 100%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--section-heading-color);
+  transform-origin: bottom right;
+  transition: transform ease-in-out 0.5s;
+}
+div.section-links a:hover::after, a.btn:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 h1.title {
   font-family: var(--heading-font);
@@ -67,12 +87,12 @@ div.about-section {
 div.about-section {
   margin-top: 50px;
 }
-.html,
-.css,
-.js,
-.bootstrap,
-.image-about-section,
-.about {
+i.html,
+i.css,
+i.js,
+i.bootstrap,
+div.image-about-section,
+div.about {
   flex: 1;
 }
 div.about {
@@ -126,6 +146,7 @@ div.project-1,
 div.project-2,
 div.project-3,
 div.project-4 {
+  margin: 30px 15px;
   box-shadow: 1px 1px 8px rgb(181, 179, 179);
   border-radius: 10px;
 }
@@ -175,13 +196,18 @@ div.location {
   margin: 2px 1px;
 }
 div.about-project {
-margin: auto;
+  margin: auto;
+}
+div.project-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 div.project-code-links {
   display: flex;
   gap: 1em;
 }
-div.tech-stack i{ 
+div.tech-stack i {
   margin: 0 30px 10px 0;
 }
 p.details {
@@ -189,30 +215,47 @@ p.details {
   padding-top: 8px;
 }
 a.btn {
-  border-radius: 4px;
-  border: 1px solid #46849faa;
-  color: #46849faa;
-  background-color: #fff;
-  padding: 5px 7px;
+  color: var(--section-heading-color);
+  padding: 0px;
   margin-top: 5px;
-  font-size: 0.7em;
+  font-size: 0.8em;
+  position: relative;
+  transition: all ease-in-out 200ms;
 }
-a.btn:hover { 
-  background: #46849faa;
-  color: #fff;
+a.btn:hover {
+  color: var(--section-heading-color);
 }
-h3.project-title{
+h3.project-title {
   display: flex;
   justify-content: start;
   color: var(--section-heading-color);
   font-size: 0.9em;
+}
+@media (max-width: 420px) {
+  div.brand,
+  div.image {
+    display: none;
+  }
+  div.section-links {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  div.intro h1,
+  div.intro p {
+    text-align: center;
+  }
+  div.links {
+    display: flex;
+    justify-content: center;
+  }
 }
 @media (min-width: 768px) {
   div.body {
     width: 85%;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 576px) {
   div.about-section {
     margin-top: 0;
     display: block;
@@ -232,8 +275,19 @@ h3.project-title{
     display: block;
     margin: 20px auto;
   }
+  div.projects {
+    margin: auto;
+    width: 100%;
+  }
   div.contacts {
     display: block;
+    text-align: center;
+  }
+  div.about-project {
+    display: grid;
+    place-items: center;
+  }
+  p.details {
     text-align: center;
   }
 }
