@@ -33,11 +33,14 @@ header {
   width: 100%;
   font-family: var(--heading-font);
 }
+div.brand{
+  color: var(--section-heading-color);
+}
 div.section-links a {
   padding: 3px;
   font-size: 0.7em;
   font-weight: 900;
-  color: #000000;
+  color: var(--section-heading-color);
   position: relative;
   transition: all ease-in-out 200ms;
 }
@@ -146,6 +149,7 @@ div.project-1,
 div.project-2,
 div.project-3,
 div.project-4 {
+  padding: 20px 10px;
   margin: 30px 15px;
   box-shadow: 1px 1px 8px rgb(181, 179, 179);
   border-radius: 10px;
