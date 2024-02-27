@@ -2,12 +2,12 @@
   margin: 0;
   padding: 0;
 }
-body {
-  min-height: 100vh;
-  min-width: 320px;
-}
-.container {
+
+.container-fluid {
+  max-width: 100vw;
+  overflow: hidden;
   font-family: "Nunito", sans-serif;
+  background-color: #eef1f34a;
 }
 :root {
   --heading-font: "Libre Baskerville", serif;
@@ -151,6 +151,7 @@ div.project-3,
 div.project-4 {
   padding: 20px 10px;
   margin: 30px 15px;
+  background-color: #ffffff;
   box-shadow: 1px 1px 8px rgb(181, 179, 179);
   border-radius: 10px;
 }
