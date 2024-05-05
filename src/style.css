@@ -237,10 +237,12 @@ h3.project-title {
   font-size: 0.9em;
 }
 @media (max-width: 420px) {
-  div.brand,
-  div.image {
+  div.brand{
     display: none;
   }
+  div.intro-section{
+flex-direction: column-reverse;
+}
   div.section-links {
     display: flex;
     justify-content: space-around;
